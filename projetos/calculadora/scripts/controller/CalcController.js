@@ -3,7 +3,7 @@ class CalcController {
     constructor(){
 
         this._displayCalc = "0";
-        this._dataAtual;
+        this._currentDate;
     }
 
     get displayCalc(){
@@ -15,11 +15,11 @@ class CalcController {
     }
 
     get dataAtual(){
-        return this._dataAtual;
+        return this._currentDate;
     }
 
     set dataAtual(valor){
-        this._dataAtual;
+        this._currentDate;
     }
     
 }

@@ -94,6 +94,66 @@ class CalcController {
 
 
 
+##########################
+AULA 3 - MANIPULANDO O DOM
+##########################
+
+Como programar em ingles??
+
+
+criar um método principal, ou seja, toda vez que começar a calculadora, estará dentro desse metódo
+
+classe CalcController(){
+
+	constructor(){
+
+		this.
+		this.
+		this.initialize();
+	}
+
+	initialize(){
+
+	}
+
+
+}
+
+DOM - Vamos manipular o DOM
+BOM - Browser
+
+Documente (Meu site)
+Object (cada tag html)
+
+
+nessa aula vou selecionar a data, a hora e o display
+
+dentro do método initialize(){} vamos selecionar os objetos utilizando document.querySelector("#nomeDoId")
+
+document.querySelector("#display);
+document.querySelector("#hora");
+document.querySelector("#data");
+
+
+como vamos manipular, terá que colocar dentro de uma variável.
+
+ficando com let displayCalcEl, let timeEl e dateEl
+
+
+agora que selecionei, vou MANIPULAR DE VERDADE (como faz isso?)
+
+depois que eu selecionei, o js entende o HTML, por isso consigo fazer a manipulação, e para fazer a maninupalçao, temos que utilizar o método innerHTML()
+
+com esse método, vou pegar o objeto que selecionei e irei inserir uma informação dentro desse objeto (elemento html selecionado pelo id )
+
+
+ainda dentro do initialize insira:
+
+displayCalcEl.innerHTML = "4567";
+
+
+
+
 
 
 
