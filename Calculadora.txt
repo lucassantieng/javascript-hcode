@@ -1,0 +1,101 @@
+AULA 1
+
+O que será aprendido?
+
+trabalhar com evento
+percorrer botoes com foreach
+oo
+
+#############################
+AULA 2 - ORIENTAÇÃO A OBJETOS
+#############################
+
+
+CRIA UMA CLASSE ONDE FICA TODA A REGRA DE NEGÓCIO
+CONTENDO METODOS E ATRIBUTOS
+
+E SE EU PRECISO APLICAR ESSA CLASSE A UM DETERMINADO PROJETO EU CRIO UM OBJETO QUE REPRESETA ESSA CLASSE.
+
+INTANCIA (QUANDO UM OBJETO REPRESENTA UMA CLASSE)
+
+PQ UTILIZAR?
+1 - ORGANIZAÇÃO DE CÓDIGO
+
+2- OTIMIZANDO CÓDIGOS
+
+
+
+renomar arquivo script para calculadora.js
+
+
+CONCEITO MVC
+
+criar pasta chamada controller e um arquivo chamado CalcControler.js
+
+class CalcController {
+
+
+}
+
+
+
+calculadora.js
+
+let calculadora = new CalcController;
+
+
+#####################################
+AULA 03 - CONSTRUTOR E ENCAPSULAMENTO
+#####################################
+
+
+Dentro do arquivo calcControllerl iremos adiconar o método constructor
+
+class CalcController {
+
+	constructor(){
+
+		this.displayCalc = "0";
+		this.dataAtual;
+	
+	}
+}
+
+
+
+Em um atributo eu faço sempre e somente sempre duas atividades, inserir dados ou recuperar dados.
+
+atributos iniciando com _ será privados
+
+getters e setters
+
+	
+
+class CalcController {
+
+	constructor(){
+
+		this._displayCalc = "0";
+		this._dataAtual;
+	
+	}
+
+
+	get displayCalc(){
+	
+		return this._displayClac;
+	}
+
+	set displayClac(valor){
+
+		this.displayCalc = valor;
+	}
+}
+
+
+
+
+
+
+
+

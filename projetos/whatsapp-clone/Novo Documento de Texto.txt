@@ -1,0 +1,4 @@
+anexar arquivos
+utilizar camera
+ler pdf
+habilitar e gravar audio do telefone

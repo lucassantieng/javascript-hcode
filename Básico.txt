@@ -1,0 +1,191 @@
+Capitulo 1
+
+##########
+01- Configurando Ambiente (Git, VScode)
+##########
+git clone https://github.com/hcodebr/curso-javascript-projeto-usuarios.git
+
+
+
+#####################
+AULA 02 - JS BASICO I
+#####################
+
+<scriptt>
+	console.log('Ola Mundo')
+	alert('Ola Mundo')
+	// linha inteiro
+	/* bloco de código */
+	//variaveis:
+	//
+	var olaMundo = "Ola Mundo!" //
+	let // leva em consideração o escopo que foi criado
+	const // o valor inserido não é alterado
+	//variaveis será armazeado algum tipo de dados
+	typeOf //mostra o tipo de dado
+	//funções de conversão (parseInt, parseFloat)
+
+	//operadores
+	let a = 10;
+	const b = 20;
+	
+	console.log(a == b) //return false, confere somente valor
+	console.log(a === b) //confere valor e tipo
+
+	//operadores lógicas (&& e ||) sera utilizado em laços
+	
+
+	//controler de fluxo (if, else if)
+
+	//já seis as opções que irá vir? ()/swicth case
+
+	//já sei a quantidade de vezes ? for
+	//percorrer um arrayfor eacth
+	//percorrer atributos de um objeto for in
+
+	//break
+	//continue
+
+	//template string 
+</script>
+
+<script src = "index.js">
+<script>
+
+
+######################
+AULA 03 - JS BASICO II
+######################
+
+//Javascript é uma linguagem de interação com usuário, em todos os momentos estarei ouvindo o que o usuário estará fazendo para poder fazer algo.
+
+//para que utilizar função? (realizar calculos, realizar conversão e realizar validação)
+
+//tipos de funções (comum(possui nome e deve ser chamada), anonima(), arrow function)
+
+
+function somar (x1, x2, operator){ //possui parametros ou melhor, argumentos
+
+
+	return eval(`${x1} ${operator} ${x2} = ${x1 operator x2}`);
+}
+
+
+let result = somar(1 , 2)
+
+console.log(result)
+
+
+//arrow function
+
+let calc = (x1, x2, operator) => {
+
+	return
+}
+
+//DOM 
+
+é a estrutura de como o html é formado
+arvore do DOM (Js manipula os elementos em html)
+como js eu irei conseguir inserir coisas dentro do html, retirar coisas
+
+
+//EVENTOS
+com os eventos eu irei reagir de acordo com o que o usuário esta fazendo.
+Quando o usuário fazer algo no sistema, o js irá ficar ouvindo tudo e de acordo com o que o usuário faz será realizado um evento.
+Resumindo: cliente clicou em um botão, então vou chamar a função criar relatório.
+
+//Tipos de eventos:
+(teclado, tempo, mouse, eventos personalizados)
+
+window.addEventListener('focus', event => {
+	console.log("focus");
+})
+
+//lendo: peguei a variavel window e add um evento para minha window e o primeiro argumento da função é o tipo de evento q o javascript vai ouvir e o segundo é qual a função que será executada quando ser feito o evento.
+
+qual meu algo ?
+o que será feito com ele?
+
+document.addEventListener('click', event => {
+	console.log()
+})
+
+window é minha janela
+
+document é o site
+
+
+Eu posso relacionar um evento com uma data (quando esse evento irá acontecer ou aconteceu?)	
+
+
+let agora = Date.now() //irá mostar o timestamp (quantidade de segundos desde 01/01/1970 até hoje)
+
+mudar para:
+
+let agora = new Date(); //irá mostrar a data em ingles
+
+console.log(agora);
+
+Manipulaçãr da data
+
+//só quero o dia
+
+console.log(agora.getDate());
+
+//somente o ano dessa data
+console.log(agora.getFullYear();
+
+//somente o mes
+console.log(agora.get();
+
+Maneira de padronizar a data de acordo com o local
+
+console.log(agora.toLocaleDateString("pt-BR")
+
+ARRAY
+variavel indexada cuja posição sao os indeces e os valores são os dados.
+
+será utilizado para armazenar mais de uma informação ao mesmo tempo.
+
+
+
+
+
+ORIENTAÇÃO A OBJETOS
+
+estilo de programar que deixa o código limpo,organizado e cada vez mais funcional.
+
+tudo acontece em uma classe (conjuneto de atributos e métodos)
+
+this (comando interno utilizado para fazer uma referencia de um atributo ou de um método (nessa classe, chama esse atributo e faça isso))
+
+new ()
+
+instancia (quando um objeto representa uma classe)
+
+
+tarefa:
+criar uma classe Celular, criar o construtor dela e uma função chamada ligar.
+
+classe Celular {
+
+	constructor(){
+
+		this.cor = "prata"
+
+	}
+
+	ligar(){
+
+		console.log("uma ligação")
+		
+		return 'ligando';	
+
+	}
+}
+
+
+let objeto = new Celular();
+
+console.log(objeto.ligar())
