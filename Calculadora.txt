@@ -12,9 +12,9 @@ AULA 2 - ORIENTAÇÃO A OBJETOS
 
 
 CRIA UMA CLASSE ONDE FICA TODA A REGRA DE NEGÓCIO
-CONTENDO METODOS E ATRIBUTOS
+CONTENDO METODOS E ATRIBUTOS (CalcController)
 
-E SE EU PRECISO APLICAR ESSA CLASSE A UM DETERMINADO PROJETO EU CRIO UM OBJETO QUE REPRESETA ESSA CLASSE.
+E SE EU PRECISO APLICAR ESSA CLASSE A UM DETERMINADO PROJETO EU CRIO UM OBJETO QUE REPRESETA ESSA CLASSE. (calculator)
 
 INTANCIA (QUANDO UM OBJETO REPRESENTA UMA CLASSE)
 
@@ -126,7 +126,7 @@ Documente (Meu site)
 Object (cada tag html)
 
 
-nessa aula vou selecionar a data, a hora e o display
+nessa aula vou selecionar o objeto a data, a hora e o display
 
 dentro do método initialize(){} vamos selecionar os objetos utilizando document.querySelector("#nomeDoId")
 
@@ -150,6 +150,96 @@ com esse método, vou pegar o objeto que selecionei e irei inserir uma informação
 ainda dentro do initialize insira:
 
 displayCalcEl.innerHTML = "4567";
+
+
+
+####################
+AULA 4 - DATA E HORA
+####################
+
+Para trabalhar com data, temos uma classe nativa do JS  chamada Date para poder manipular a data e a hora.
+
+
+no arquivo CalcController vamos pegar as variáveis do initialize e colocar dentro do construtor já apontando pra ela mesmo e informar a intenção delas serem privadas, vamos também remover o this._displayCalc do código
+
+
+na instanciação do objeto calculadora, vamos colocar window.calculator = new CalcController(); //aqui estamos deixando a variavel global, iremos poder mexer diretamente do console
+
+ao fazer isso, podemos fazer um teste no console do browser colocando calculator.displayCalc = 4 e ver o resultado na tela
+
+
+
+Agora vamos atualizar a data e a hora atual. Para fazer isso, vamos colocar no retorno do get current date o new Date();
+/* vamos brincar no browser antes:
+	declare dt = new Date();
+	dir(dt)
+	dt.getDay
+
+novas funções: pegar o nome do mes por extenso
+	dt.toLocaleDateString('pt-br')
+	dt.toLocaleDateString('pt-br', {month: 'long'})   //short
+
+
+
+Agora precisamos atualizar a data e a hora do display. Para isso vamos criar o get e set do displayTime e do displayDate
+
+retornando a própria inserção do HTML pelo JS.
+
+return this._dateEl.innerHTML;
+
+this._dateEl.innerHTML = value;
+
+
+Vale lembrar que a data é alterada a cada segunda, como resolver isso?
+
+Para o segundo alterar normalmente, vamos no initialize e vamos utilizar um recurso do próprio javascript chamado setInterval(), esse recurso vai definir um intervalo em milisegundos para executar algo
+
+ficando:
+
+setInterval(()=>{
+
+	this.displayDate = this.currentDate.toLocaleDateString('pt-BR')
+	
+}, 1000)
+
+primeiro a função que eu quero executar
+
+explicando a função: o displayDate irá receber uma nota instancia do Date pegando a localidade de onde eu estou.
+o pt-br podemos colocar em uma variavel dentro do construtor
+
+refaturando o código:
+vamos criar um método para conseguir fazer com que ao carregar a página, não demore o primeiro um segundo para aparecer a hora na tela.
+
+vamos usar o método antes e dentro do setInterval.
+
+
+
+#########################
+AULA - Query Selector
+#########################
+
+assunto: botoes da calculadora
+
+iremos utilziar o document.querySelector() sempre que for manipular o DOM para acessar algum elemento
+
+iniciando sobre os botoes, vamos no elements e procurar os botoes, será diferenciado por conta do tipo da imagem(svg).
+é importar ver que temos buttons e parts por conta do svg (os eventos que vamos colocar, terá que abordar os dois).
+
+
+mão na massa:
+quando vamos separar os botoes que irá receber meus eventos futuros, para isso cria um metodo para fazer essa separação dos botoes 
+
+initButtonsEvents(){
+	//document.querySelector("#buttons > g, #parts > g") //dessa maneira irá trazer somente o primeiro
+	  document.querySelectorAll("")
+}
+
+
+resumo: nessa aula separados os botoes que vamos utilizar os eventos
+
+
+
+
 
 
 
